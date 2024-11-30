@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>tech.kage.time</groupId>
+        <artifactId>tech.kage.time-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+
+    <artifactId>tech.kage.time.ntp</artifactId>
+
+    <name>tech.kage.time.ntp</name>
+    <description>An implementation of java.time.InstantSource independent of the local clock and synchronized with an NTP server</description>
+    <url>https://github.com/kagetech/time-source</url>
+
+    <licenses>
+        <license>
+            <name>BSD-2-Clause</name>
+            <url>https://opensource.org/license/bsd-2-clause</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Dariusz Szpakowski</name>
+            <organization>KageTech</organization>
+            <organizationUrl>https://kage.tech</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/kagetech/time-source.git</connection>
+        <developerConnection>scm:git:git@github.com:kagetech/time-source.git</developerConnection>
+        <url>https://github.com/kagetech/time-source</url>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/kagetech/time-source/issues</url>
+    </issueManagement>
+
+    <properties>
+        <!-- Apache Commons Net -->
+        <commons.net.version>3.11.1</commons.net.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>${commons.net.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
